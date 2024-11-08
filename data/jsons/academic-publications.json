@@ -5,11 +5,47 @@
          "description":"Artificial intelligence (AI) is playing a leading role in the digital transformation of enterprises, particularly in the manufacturing industry where it has been responsible for a profound transformation in key business and production operations. Despite the accelerated growth of AI technologies, knowledge of the implementation of AI by small and medium-sized enterprises (SMEs) remains underexplored. Thus, this study seeks to examine how manufacturing SMEs orchestrate resources for AI implementation. Building on the resource orchestration (RO) theory and recent work on AI implementation, we investigate multiple case studies involving manufacturing SMEs in Sweden operating in the packaging, plastic, and metal sectors. Our findings indicate that SMEs structure a portfolio based on acquiring and accumulating AI resources. AI resources are bundled into learning and governance capabilities to leverage configurations for AI implementation. Through a dynamic process of AI resource orchestration, SMEs effectively leverage AI resources and capabilities by mobilising technologies, coordinating manufacturing processes, and empowering skilled people. This research contributes to existing practice and the academic literature on AI implementation, highlighting how SMEs orchestrate AI resources and capabilities to drive an organisation’s digital transformation whilst creating a competitive advantage.",
          "fileLinks":[{"info": "download", "type": 1, "link": "/files/paper1.pdf"},
 					  {"info": "cite", "type": 3, "link": "Peretz-Andersson, E., Tabares, S., Mikalef, P., Parida, V., Artificial intelligence implementation in manufacturing SMEs: A resource orchestration approach. International Journal of Information Management. 2024."}],
-		 "authors": "Teddy Lazebnik",
+		 "authors": "Einav Peretz-Andersson, Sabrina Tabares, Patrick Mikalef, Vinit Parida",
          "year": 2024,
          "topic":"AI",
          "type":"Paper",
          "publisher":"International Journal of Information Management",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"The unified perspective of digital transformation and continuous software engineering",
+         "description":"Software is a key component of most products, services, industrial processes, and back-office functions. Thus, companies may gain an advantage by establishing fast feedback cycles to improve their software. Continuous software engineering (CI/CD) is being primarily studied as an engineering topic. However, the rest of the organization needs to align and be prepared to utilize the benefits of CI/CD. In this paper, we explore the overlap between CI/CD and digital transformation (DT). We study literature in both areas to develop a map of conditions, mechanisms, and outcomes. As a result, we present a unified perspective of CI/CD and DT. We found that CI/CD can be seen as an implementation of DT in a software organization. DT perspective can help to guide the adoption of CI/CD from an organizational perspective.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/paper2.pdf"},
+					  {"info": "cite", "type": 3, "link": "Klotins, E., Peretz-Andersson, E., The unified perspective of digital transformation and continuous software engineering. Proceedings of the 5th International Workshop on Software-intensive Business: Towards Sustainable Software Business. 2022."}],
+		 "authors": "Eriks Klotins, Einav Peretz-Andersson",
+         "year": 2022,
+         "topic":"AI",
+         "type":"Paper",
+         "publisher":"Proceedings of the 5th International Workshop on Software-intensive Business: Towards Sustainable Software Business",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"Empirical AI Transformation Research: A Systematic Mapping Study and Future Agenda",
+         "description":"Background: Intelligent software is a significant societal change agent. Recent research indicates that organizations must change to reap the full benefits of AI. We refer to this change as AI transformation (AIT). The key challenge is to determine how to change and which are the consequences of increased AI use. Aim: The aim of this study is to aggregate the body of knowledge on AIT research. Method: We perform an systematic mapping study (SMS) and follow Kitchenham’s procedure. We identify 52 studies from Scopus, IEEE, and Science Direct (2010–2020). We use the Mixed-Methods Appraisal Tool (MMAT) to critically assess empirical work. Results Work on AIT is mainly qualitative and originates from various disciplines. We are unable to identify any useful definition of AIT. To our knowledge, this is the first SMS that focuses on empirical AIT research. Only a few empirical studies were found in the sample we identified. Conclusions We define AIT and propose a research agenda. Despite the popularity and attention related to AI and its effects on organizations, our study reveals that a significant amount of publications on the topic lack proper methodology or empirical data.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/paper3.pdf"},
+					  {"info": "cite", "type": 3, "link": "Peretz-Andersson, E., Torkar, R., Empirical AI Transformation Research: A Systematic Mapping Study and Future Agenda. e-Informatica Software Engineering Journal. 2022."}],
+		 "authors": "Einav Peretz-Andersson, Richard Torkar",
+         "year": 2022,
+         "topic":"AI",
+         "type":"Paper",
+         "publisher":"e-Informatica Software Engineering Journal",
+         "publicationStatus":"Published"
+      },
+	{
+         "name":"AI Transformation in the Public Sector: Ongoing Research",
+         "description":"Real-world application of data-driven and intelligent systems (AI) is increasing in the private and public sector as well as in society at large. Many organizations transform as a consequence of increased AI implementation. The consequences of such transformations may include new recruitment plans, procurement of additional IT, changes in existing positions and roles, new business models, as well as new policies and regulations. However, it is unclear how this transformation varies across different types of organizations. We study the effects of bottom-up approaches, such as pilot projects and mentoring to specific groups within organizations, and aim to explore how such approaches can complement the top-down approach of strategic AI implementation. Our context is the public sector. Our goal is to acquire an improved understanding of how and when AI transformation occurs in the public sector, which are the consequences, and which strategies are fruitful or detrimental to the organization. We aim to study public sector organizations in Sweden, Norway, New Zealand, Germany, and The Netherlands to learn about potential similarities and differences with regard to AI transformation.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/paper4.pdf"},
+					  {"info": "cite", "type": 3, "link": "Peretz-Andersson, E., Lavesson, N., Bifet, A., Mikalef, P., AI Transformation in the Public Sector: Ongoing Research. Swedish Artificial Intelligence Society Workshop. 2021."}],
+		 "authors": "Einav Peretz-Andersson, Niklas Lavesson, Albert Bifet, Patrick Mikalef",
+         "year": 2021,
+         "topic":"AI",
+         "type":"Workshop",
+         "publisher":"Swedish Artificial Intelligence Society Workshop",
          "publicationStatus":"Published"
       }
 	  ]
