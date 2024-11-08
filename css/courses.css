@@ -1,0 +1,299 @@
+/*------------header file section area--------------*/
+.course-card-panel{
+  padding-bottom: 40px;
+}
+@media (max-width:430px){
+  .teaching-papers-header-section h1{
+    /* Courses */
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24pt;
+    line-height: 32px;
+    /* identical to box height */
+    align-items: center;
+    text-align: center;
+
+    /* Grey1 */
+    color: #1A202C;
+  }
+
+  .course-card-panel{
+    align-items: center;
+
+  }
+
+  .teaching-papers-header-section{
+	  padding-left: 32px;
+	  padding-right: 32px;
+  }
+  
+
+}
+/* ----------------- filters area ----------------- */
+.personal-row .filter-by-txt{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 140.62%;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #52575C;
+}
+
+.resources-filters{
+  margin-top: 20px;
+}
+
+#reset-btn{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 180%;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #5A67D8;
+  margin: 10px 36px;
+  cursor: pointer;
+  
+}
+
+#filter-btn{
+  display: none;
+}
+
+.select-wrapper{
+  display: block;
+  margin-left: 16px;
+}
+
+/* ----------------- end - filters area ----------------- */
+.academic-papers-header-section{
+  padding-left: 0;
+}
+.academic-papers-header-section  select{
+  min-width: 10rem;
+  padding: 8px 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 3px rgba(26, 32, 44, 0.04), 0px 0px 2px #E2E8F0;
+  border-radius: 4px;
+  border: 0px solid white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #4A5568;
+  box-shadow: 0px 8px 15px rgba(45, 55, 72, 0.15), 0px 0px 2px rgba(127, 156, 245, 0.16);
+  background-image: url("/lecture_website_template/img/expand_more.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.institution-title{
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 43px;
+  letter-spacing: 0.04em;
+  color: #5A67D8;
+  padding-bottom: 16px;
+}
+
+.institution-card{
+  padding-bottom:22px;
+}
+
+/* --------- Start course card area --------------------*/
+
+#course-card-header{
+  display: flex;
+  flex-flow: column;
+}
+#course-title{
+  order:3;
+  margin-bottom: 0px;
+}
+#semester-info{
+  order:2;
+}
+
+.card-year{
+  display: none;
+}
+
+
+.course-card-header-hard{
+  box-shadow: none;
+  padding-top: 0;
+  padding-left: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+
+/* --------- End course card area ----------------------*/
+
+
+
+@media (max-width:430px){
+
+  .teaching-papers-body-section,
+  .teaching-papers-body-section h3,
+  .teaching-papers-body-section p{
+    margin-left: 0px;
+  }
+  .institution-title{
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 0px;
+
+  }
+
+  .panel-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* ----------------- mobile - filters area ----------------- */
+
+  #reset-btn{
+    font-size: 14px;
+    margin: 12px 10px;
+    text-align: left;
+  }
+  
+  .col-on-mobile{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .select-wrapper{
+    display: none;
+  }
+
+
+  #filter-btn{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 135%;
+    text-align: center;
+    color: #667EEA;
+    display: block;
+    padding-left: 0;
+  }
+
+  .filter-by-txt{
+    display: none;
+  }
+
+
+
+/* ----------------- mobile end - filters area ----------------- */
+
+
+/* ---------  mobile Start course card area --------------------*/
+  #course-card-header{
+    display: flex;
+    flex-flow: column;
+  }
+  #course-title{
+    order:2;
+  }
+  #semester-info{
+    order:3;
+    align-self: flex-start;
+  }
+
+  .card-year{
+    display: block;
+    margin-left:0px !important;
+  }
+
+  .display{
+    display: block;
+  }
+
+  /*go to course button*/
+  .secondary-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    border: 2px solid #5A67D8;
+    box-sizing: border-box;
+    height: 49px;
+    width: 210px;
+    border-radius: 8px;
+    padding: 14px 22px;
+    font-size: 18px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    display: flex;
+    text-align: center;
+    letter-spacing: 0.025em;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .course-card-header-hard p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    color: #1A202C;
+  }
+  .course-card-header-hard h3{
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    /* Grey1 */
+    color: #1A202C;
+  }
+
+  .course-card-panel p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #1A202C;
+  }
+
+  /* --------- End mobile course card area ----------------------*/
+
+}
+
+
+

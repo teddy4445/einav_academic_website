@@ -1,0 +1,28 @@
+{
+   "biography":"Einav Peretz-Andersson is a Lecturer and PhD student in business administration at Jönköping University, Sweden. She is program manager for the AI Engineering Master of Science program. She has an MBA from Jönköping University and a Master in Public Policy and Economics from Tel Aviv University, Israel. Her research focus is on AI transformation and organizational change. She is currently conducting an interdisciplinary, international collaboration with researchers from Norwegian University of Technology, Norway, and Luleå University of Technology, Sweden, with the goal to generate new knowledge concerning AI transformation in the public sector.",
+   "researchInterests":[
+		"Real-world application of data-driven and intelligent systems (AI) is increasing in the private and public sector as well as in society at large."
+   ],
+   "featuredPublications":[
+	{
+         "name":"Artificial intelligence implementation in manufacturing SMEs: A resource orchestration approach",
+         "description":"Artificial intelligence (AI) is playing a leading role in the digital transformation of enterprises, particularly in the manufacturing industry where it has been responsible for a profound transformation in key business and production operations. Despite the accelerated growth of AI technologies, knowledge of the implementation of AI by small and medium-sized enterprises (SMEs) remains underexplored. Thus, this study seeks to examine how manufacturing SMEs orchestrate resources for AI implementation. Building on the resource orchestration (RO) theory and recent work on AI implementation, we investigate multiple case studies involving manufacturing SMEs in Sweden operating in the packaging, plastic, and metal sectors. Our findings indicate that SMEs structure a portfolio based on acquiring and accumulating AI resources. AI resources are bundled into learning and governance capabilities to leverage configurations for AI implementation. Through a dynamic process of AI resource orchestration, SMEs effectively leverage AI resources and capabilities by mobilising technologies, coordinating manufacturing processes, and empowering skilled people. This research contributes to existing practice and the academic literature on AI implementation, highlighting how SMEs orchestrate AI resources and capabilities to drive an organisation’s digital transformation whilst creating a competitive advantage.",
+         "fileLinks":[{"info": "download", "type": 1, "link": "/files/paper1.pdf"},
+					  {"info": "cite", "type": 3, "link": "Peretz-Andersson, E., Tabares, S., Mikalef, P., Parida, V., Artificial intelligence implementation in manufacturing SMEs: A resource orchestration approach. International Journal of Information Management. 2024."}],
+		 "authors": "Teddy Lazebnik",
+         "year": 2024,
+         "topic":"AI",
+         "type":"Paper",
+         "publisher":"International Journal of Information Management",
+         "publicationStatus":"Published"
+      }
+   ],
+   "currentProjects":[
+      {
+         "name":"The economics of AI",
+         "topic": "AI",
+         "description":"Something smart goes here",
+         "link":{"info": "View project", "type": 2, "link": "", "example":""}
+      }
+   ]
+}

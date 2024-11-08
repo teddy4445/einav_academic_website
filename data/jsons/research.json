@@ -1,0 +1,25 @@
+{
+	"work_with_me_opening": "Ad here later",
+	"open_positions": [
+
+	],
+	"projects": [{
+			"name": "Example project",
+			"participants": [{
+				"name": "Teddy Lazebnik",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "https://teddylazebnik.com/",
+				"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
+				"linkedinLink": "https://www.linkedin.com/in/teddy-lazebnik/"
+			}],
+			"description": "A demo explenation of the project.",
+			"start_month": 11,
+			"start_year": 2024,
+			"end_month": 11,
+			"end_year": 2025,
+			"team_members": 2,
+			"relevant_resources": []
+		}
+	]
+}

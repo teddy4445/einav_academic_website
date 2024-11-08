@@ -1,0 +1,464 @@
+.course-page-section{
+    margin-top: 5rem;
+    padding-bottom: 6.75rem;
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.course-page-section a{
+    color: #5A67D8;
+    text-decoration: underline;
+
+}
+
+.main-header-page p {
+    font-size: 1rem;
+}
+
+.main-header-page-mobile{
+    display: none;
+}
+@media screen and (max-width: 430px) {
+    .main-header-page {
+        display: none;
+    }
+
+    .main-header-page-mobile{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-header-page-mobile h1{
+        font-family: Playfair Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+        margin-top: 40px;
+        align-self: center;
+        width: 289px;
+    }
+    .main-header-page-mobile p{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 150%;
+    }
+    
+}
+
+
+/****** icons sections - start ******/
+#icons_section {
+    margin-bottom: 4.75rem
+}
+
+.header-margin{
+    margin-bottom: 27px;
+}
+
+.header-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-top: 2.25rem;
+	max-width: 600px;
+}
+
+.item-detail{
+    display: flex;
+    flex-direction: row;
+}
+
+.item-detail img {
+    left: 4.17%;
+    right: 4.17%;
+    top: 12.5%;
+    bottom: 12.5%; 
+    padding-right: 8px;
+    width: 1.75rem;
+    height: 1.5rem;
+}
+
+.item-detail p {
+    margin: 0;
+}
+
+.sylabus-link {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.course-sylabus-img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.75rem;
+    margin-bottom: 5px;
+}
+
+.icon-detail-panel{
+    display: none;
+}
+
+@media screen and (max-width: 430px){
+    .header-detail {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        margin-top: 2.25rem;
+        max-width: 600px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    #icons_section {
+        margin-bottom: 71px;
+    }
+
+    svg .active-icon{
+        fill: #7F9CF5;
+    }
+
+
+    .icon-detail-panel{
+        width: 80%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: white;
+        border-radius: 8px;
+        align-self: center;
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+		margin-top: 20px;
+        line-height: 150%;
+        background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+        box-shadow: 0px 8px 20px rgba(45, 55, 72, 0.15);
+    }
+
+    .active-icon-panel{
+        display: block;
+    }
+
+}
+/****** icons sections - end ******/
+
+.grey-1{
+    color: #1A202C;
+}
+
+.body-section {
+    display: none;
+}
+
+/****** tabs sections - start ******/
+.active-tab-title {
+    font-weight: 700 !important;
+    color: black !important;
+}
+
+hr {
+    margin-top: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    
+}
+
+@media screen and (max-width: 850px) {
+
+    hr {
+        margin-top: 0;
+        border: 1px solid #A3BFFA;
+        
+    }
+}
+
+@media screen and (max-width: 1080px) {
+
+	.course-page-section{
+		margin-top: 1rem;
+		margin-left: 30px !important;
+		margin-right: 30px !important;
+	}
+}
+
+@media screen and (max-width: 670px) {
+    .course-page-section {
+        margin-left: 16px !important;
+        margin-right: 16px !important;
+        padding-bottom: 0.625rem;
+    }
+
+    .item-detail p {
+        font-size: 16px;
+    }
+	
+	.item-detail{
+        margin-top: 10px;
+        
+	}
+
+	.sylabus-link{
+        margin-top: 20px !important;
+        font-size: 16px;
+        text-decoration: underline;
+
+    }
+    
+    .item-detail-mobile{
+        margin-top: 10px;
+    }
+
+    /* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover  .tooltiptext {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+    .item-detail p {
+        font-size: 12px;
+    }
+}
+
+/****** tabs sections - end ******/
+
+.module{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.main-dot {
+    display: inline-block;
+    border-radius: 100%;
+    background-color: #C4C4C4;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 3rem 0.75rem;
+	display: none;
+}
+
+.section-seperator {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.section-seperator svg{
+    display: none;
+}
+
+.blue-hr {
+    border: 1px solid #A3BFFA;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.content-title {
+    margin-left: 1.5rem;
+    margin-bottom: 0;
+    font-family: Playfair Display;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.content-subtitle {
+    margin-left: 1.5rem;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.content-text {
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: justified;
+}
+
+@media screen and (max-width: 450px) {
+
+    .content-text {
+        margin-left: 1.5rem;
+        margin-top: 0.625rem;
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: justified;
+    }
+
+    .content-title {
+        margin-left: 1.5rem;
+        margin-bottom: 0;
+        font-family: Playfair Display;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.04em;
+        text-align: left;
+    }
+
+    .section-seperator {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .section-seperator svg{
+        display: flex;
+    }
+
+    .content-subtitle {
+        margin-left: 1.5rem;
+        font-family: Roboto;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.04em;
+        text-align: left;
+    }
+
+    .module h5, .module .resource-link{
+        font-size: 16px;
+    }
+
+
+    .summary {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px !important;
+        line-height: 150%;
+        align-items: center;
+        
+    }
+    .summary-section h2{
+        text-align: center;
+
+    }
+  
+    
+}
+
+/******* resource section - start ******/
+
+.resource-list {
+    margin-left: 1rem;
+}
+
+.resource-list-item-title {
+    margin-bottom: 0.75rem;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.resource-img {
+    margin-right: 0.75rem;
+}
+
+.resource-link {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #5A67D8;
+    cursor: pointer;
+}
+
+.collapse-button {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #5A67D8;
+    cursor: pointer;
+}
+
+.resource-description {
+    margin-left: 2.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.more-section {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .resource-description-module {
+        margin-left: 0rem;
+    }
+
+    .resource-link {
+        font-size: 1.125rem;
+        font-weight: 400;
+        text-decoration: underline;
+        color: #5A67D8;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .resource-list-item-title {
+        margin-bottom: 0.75rem;
+        font-family: Roboto;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 23px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        text-transform:capitalize;
+    }
+}
+
+/******* resource section - end ******/

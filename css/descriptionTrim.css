@@ -1,0 +1,11 @@
+.collapse-button {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #5A67D8;
+    cursor: pointer;
+}
+
+.more-section {
+    display: none;
+}

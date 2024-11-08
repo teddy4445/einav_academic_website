@@ -1,0 +1,15 @@
+{
+   "members":[
+	  {
+         "name": "Cool student",
+         "title": "Research assistance",
+         "description": "Something smart on this student.",
+         "s_date": "11/07/2024",
+		 "e_date": "11/07/2025",
+		 "image_link": "img/lab/userf.png",
+		 "info_link": "",
+		 "category_name": "Current",
+		 "order": 1
+      }
+	]
+}

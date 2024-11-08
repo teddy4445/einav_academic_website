@@ -1,0 +1,21 @@
+{
+	"position": "Lecturer | PhD student",
+	"field": "The economics of AI",
+	"addresses":
+	[
+		{
+			"university":"Jonkoping University",
+			"location": "E2418",
+			"hours": "Send an email"
+		}
+	],
+	"phone": "+46 36-10 1713",
+	"email": "einav.peretz.andersson@ju.se",
+	"linkedin_link": "https://www.linkedin.com/in/einav-peretz-andersson/",
+	"google_scholar_link": "https://scholar.google.com/citations?hl=en&user=kfEJa0EAAAAJ",
+	"facebook_link": "",
+	"github_link": "",
+	"bitbucket_link": "",
+	"name":"Einav Peretz Andersson",
+	"cvfile":"/files/cv.pdf"
+}

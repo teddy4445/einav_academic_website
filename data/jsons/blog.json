@@ -1,0 +1,13 @@
+{
+   "posts":[
+      {
+         "title":"Demo blog post",
+         "description":"Just demo",
+         "fileLinks":[{"info": "Read More", "type": 2, "link": "1"}],
+		 "year": 2024,
+		 "month": 11,
+		 "day": 8,
+		 "order": 1
+      }
+	]
+}

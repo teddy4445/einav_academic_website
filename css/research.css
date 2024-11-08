@@ -1,0 +1,539 @@
+/* page sections */
+
+.academic-papers-container {
+    padding-top: 0;
+    margin-top: 5rem;
+}
+
+#main-body-page {
+    margin-top: 2.5rem;
+}
+
+.research-open-section{
+	margin-bottom: 40px;
+}
+
+.main-dot {
+    /*display: inline-block;*/
+	display: none;
+    border-radius: 100%;
+    background-color: #C4C4C4;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 3rem 0.75rem;
+}
+
+.section-seperator {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+	display: none;
+}
+
+.space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.moreLessButton {
+    align-self: flex-end;
+    margin-bottom: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.flip180 {
+    transform: rotate(180deg);
+}
+
+.collapsing-section-title {
+    cursor: pointer;
+    width: 95%;
+    margin: auto;
+}
+
+.collapsing-section {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 1.5rem;
+    margin-bottom: 2.625rem;
+    max-height: 0;
+    transition: max-height 1.5s ease-in-out;
+    -moz-transition: max-height 1.5s ease-in-out;
+    -webkit-transition: max-height 1.5s ease-in-out;
+    -o-transition: max-height 1.5s ease-in-out;
+}
+
+.open-section {
+    max-height: 9999px;
+}
+
+.body-section {
+    display: none;
+}
+
+.research-requierment-list{
+	list-style-position: inside;
+}
+
+.research-requierment-list li{
+	padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.apply-position-section {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.opening-statment{
+	font-family: Roboto;
+    font-size: 1.125rem;
+    font-weight: 400;
+	line-height: 150%;
+	color: #1A202C;
+	margin-bottom: 50px;
+}
+
+.col-important{
+	flex-direction: column !important;
+}
+
+.collapse-button {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #5A67D8;
+    cursor: pointer;
+}
+
+.resource-description {
+    margin-left: 2.25rem;
+    font-size: 18px;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.more-section {
+    display: none;
+}
+
+.about-position-section {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+hr {
+    margin: auto;
+    margin-top: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.blue-hr {
+    border: 1px solid #A3BFFA;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.position-hr-mobile {
+    display: flex;
+}
+
+
+
+@media (max-width:430px){
+    #main-body-page{
+        margin-top: 0;        ;
+        margin-left: 1.5625rem;
+        margin-right: 1.5625rem;
+
+    }
+    
+   
+    .academic-papers-header-section h1{
+        font-family: Playfair Display;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .academic-papers-container{
+        padding-top: 0;
+        margin-top: 2.5rem;
+    }
+
+    .research-open-section{
+        margin-bottom: 59px;
+    }
+
+    hr {
+        border: 1px solid #E2E8F0;
+        border-bottom-width: 0;
+    }
+
+    .blue-hr {
+        border: 1px solid #A3BFFA;
+        margin-top: 0;
+        margin-bottom: 0rem;
+        border-bottom-width: 0;
+    }
+
+    .opening-statment, .reachout{
+        font-size: 1.125rem;
+    }
+
+    .research-requierment-list li{
+        font-size: 1.125rem;
+        font-weight: 400;
+        padding: 0;
+    }
+
+    .position-hr-mobile {
+        display: none;
+    }
+
+    .collapsing-section {
+        margin-bottom: 1.125rem;
+        margin-top: 0.625rem;
+    }
+
+    .section-seperator {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .moreLessButton {
+        margin-bottom: 0.625rem;
+    }
+
+}
+/****** research card section - start ******/
+
+.research-duration {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4A5568;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+    align-self: flex-end;
+}
+
+.content-title {
+    margin-left: 1.5rem;
+    margin-bottom: 0;
+    font-family: Playfair Display;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.content-subtitle {
+    font-family: Playfair Display;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #4A5568;
+	margin-bottom: 2px;
+}
+
+.content-text {
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: justified;
+}
+
+.research-open-statment{
+	margin-bottom: 40px;
+	margin-top: 1rem;
+}
+
+@media (max-width:430px){
+    .research-open-statment {
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 20px;
+        margin-left: 25px;
+        margin-right: 41px;
+        margin-bottom: 0px;
+    }
+
+    .research-title  {
+        flex-direction: column;
+    }
+
+    .content-title {
+        font-family: Playfair Display;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27px;
+        letter-spacing: 0.04em;
+        text-align: left;
+    }
+
+    .research-duration{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #4A5568;
+        margin-left: 1.5rem;
+        margin-bottom: 0;
+        align-self: self-end;
+        margin-left: 0.625rem;
+    }
+
+    .research-title .position-type {
+        font-size: 14px;
+    }
+
+    .content-text {
+        font-size: 1.125rem;
+    }
+
+    .content-subtitle{
+        font-size: 1.25rem !important;
+        color: #1A202C;
+    }
+
+    .content-subtitle-position {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 600 !important;
+        font-size: 20px;
+        line-height: 150%;
+        display: flex;
+        /* Grey3 */
+        color: #4A5568;
+    }
+
+    .content-title{
+        margin-left: 0.625rem;
+    }
+
+    .position-info {
+        margin-bottom: 1.25rem;
+    }
+
+    .reachout a {
+        margin-left: 32px;
+    }
+}
+
+/****** research card section - end ******/
+
+/****** team section - start ******/
+
+.team-section {
+    margin-top: 2.5rem;
+}
+
+.team-content-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.req-content-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.team-content-section-no-space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+	flex-wrap: wrap;
+}
+
+.team-content-section-no-space-between .member-card {
+    margin-right: 4.5rem;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-self: flex-start;
+}
+
+.member-properties {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.member-details {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;  
+    margin-left: 0.75rem;
+}
+
+.member-role {
+    font-family: Roboto;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #718096;
+    margin-left: 0.75rem;
+}
+
+.member-pesonal-img {
+    position: relative;
+    top: 3px;
+    margin-left: 0;
+}
+
+.member-link-icons {
+    flex-direction: row;
+    margin-left: 2.5rem;
+}
+
+.member-link-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.role-link-icon {
+    width: 25px;
+    height: 19px;
+    margin-left: 0.15rem;
+}
+.role-pesonal-img{
+    position: relative;
+    top: 3px;
+}
+
+@media only screen and (max-width: 850px) {
+
+    .academic-papers-header-section .member-details{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+	.team-content-section{
+		justify-content: center;
+	}
+	
+	.req-content-section{
+		justify-content: start;
+	}
+
+	.team-content-section-no-space-between {
+		justify-content: center;
+	}
+
+	.team-content-section-no-space-between .member-card {
+		margin-right: 0rem;
+    }
+
+    .team-section {
+        margin-top: 1.25rem;
+    }
+
+    .role-properties {
+        margin-top: 5px;
+    }
+
+    .member-link-icons .member-link-icon {
+        width:1.75rem;
+        height: 1.75rem;
+    }
+
+    
+    
+    
+
+}
+
+@media only screen and (max-width: 430px) {
+    .member-properties p{
+        font-size: 18px;
+    }
+
+    .member-card {
+        margin-bottom: 1.3125rem;
+    }
+
+}
+
+
+/****** team section - end ******/
+
+/****** relevant links - start *****/
+
+.links-section {
+    margin-top: 2.5rem;
+}
+
+.relevant-links-content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+
+}
+
+.resource-link {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #5A67D8;
+}
+
+.resource-description {
+    margin-left: 2.25rem;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.resource-img {
+    margin-right: 0.75rem;
+}
+
+@media only screen and (max-width: 430px) {
+    .resource-link {
+        font-size: 18px;
+    }
+
+    .relevant-links-content-section {
+        margin-bottom: 0;
+    }
+}
+/****** relevant links - end *****/
