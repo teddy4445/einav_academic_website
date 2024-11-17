@@ -1,24 +1,122 @@
 {
-	"work_with_me_opening": "Ad here later",
+	"work_with_me_opening": "Want to work with me? Send me an <a href='mailto:einav.peretz.andersson@ju.se'>email</a> and lets discuss.",
 	"open_positions": [
-
+		
 	],
 	"projects": [{
-			"name": "Example project",
+			"name": "Next Generation (Tillväxtverket)",
 			"participants": [{
+				"name": "Vinit Parida",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?hl=en&user=E-4NXpcAAAAJ",
+				"linkedinLink": ""
+			},{
+				"name": "Patrick Mikalef",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?hl=en&user=S-cenCEAAAAJ",
+				"linkedinLink": ""
+			},{
+				"name": "Sabrina Tabares",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.se/citations?hl=en&user=fWHQ-WIAAAAJ",
+				"linkedinLink": ""
+			},{
 				"name": "Teddy Lazebnik",
 				"title": "Ph.D.",
 				"role": "Co-author",
 				"websiteLink": "https://teddylazebnik.com/",
 				"googleLink": "https://scholar.google.com/citations?user=7Kl5lGYAAAAJ&hl=en",
 				"linkedinLink": "https://www.linkedin.com/in/teddy-lazebnik/"
+			},{
+				"name": "Maria Riveiro",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?user=RfaWgB0AAAAJ&hl=en",
+				"linkedinLink": ""
+			},{
+				"name": "Maria Riveiro",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?user=RfaWgB0AAAAJ&hl=en",
+				"linkedinLink": ""
+			},{
+				"name": "Lars Carlsson",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?hl=en&user=VILa-_0AAAAJ",
+				"linkedinLink": ""
+			},{
+				"name": "Alexandra Kogan",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.se/citations?hl=en&user=9rUcuC0AAAAJ",
+				"linkedinLink": ""
+			},{
+				"name": "Peter Njekwa Ryberg",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.se/citations?hl=en&user=fkAOcAUAAAAJ",
+				"linkedinLink": ""
+			},{
+				"name": "Meira Levy",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.se/citations?hl=en&user=uVim3SAAAAAJ",
+				"linkedinLink": ""
+			},{
+				"name": "Anna Zamansky",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.se/citations?hl=en&user=zOwPqJoAAAAJ",
+				"linkedinLink": ""
+			},{
+				"name": "Cinzia Battistella",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?hl=en&user=72FAEssAAAAJ",
+				"linkedinLink": ""
+			},{
+				"name": "Giovanna Attanasio",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?hl=en&user=VhPztmgAAAAJ",
+				"linkedinLink": ""
+			},{
+				"name": "Richard Torkar",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?user=yNR3XUMAAAAJ&hl=en",
+				"linkedinLink": ""
+			},{
+				"name": "Eriks Klotins",
+				"title": "Ph.D.",
+				"role": "Co-author",
+				"websiteLink": "",
+				"googleLink": "https://scholar.google.com/citations?user=dBieLTcAAAAJ&hl=en",
+				"linkedinLink": ""
 			}],
-			"description": "A demo explenation of the project.",
+			"description": "The 'Next Generation' initiative is part of Tillväxtverket’s efforts to promote innovation and sustainable growth in Sweden. [Explore Tillväxtverket here.](insert link to Tillväxtverket website) A Smart Promotor of Biodiversity for Our Gardens and Common Green Spaces (Vinnova) This project aims to develop innovative solutions for enhancing biodiversity in urban green spaces. It includes travel grants to establish research collaborations with Husqvarna, Haifa University (Israel), and LEMNISCATE (Israel) AFAIR Project (The Knowledge Foundation). The AFAIR project, supported by the Knowledge Foundation, focuses on advancing research in biodiversity and its impact on green spaces.",
 			"start_month": 11,
 			"start_year": 2024,
 			"end_month": 11,
 			"end_year": 2025,
-			"team_members": 2,
+			"team_members": 14,
 			"relevant_resources": []
 		}
 	]
