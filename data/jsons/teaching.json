@@ -1,16 +1,16 @@
 {
 	"teaching_philosophy": "Online learning is the future. Students should be able to find quality acadmic resources easly which provided by their lecturers.",
 	"courses": [{
-			"name": "Example course",
+			"name": "Research Methods for Intelligent Systems",
 			"passkey": "",
-			"code": "00000",
+			"code": "TRIS",
 			"year": "2024",
-			"topic": "AI",
+			"topic": "Research Methods",
 			"semester": "1",
 			"university": "Jonkoping University",
 			"department": "Computing",
-			"location_class": "Zoom",
-			"syllabus": "",
+			"location_class": "on site",
+			"syllabus": "/files/Research Methods for Intelligent Systems.pdf",
 			"grade_parts": [{
 					"name": "Home work",
 					"percent": 50
