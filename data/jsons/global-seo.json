@@ -1,5 +1,28 @@
 {
-	"title": "Dr. Einav Peretz Andersson",
-	"description": "",
-	"keywords": []
+  "title": "Dr. Einav Peretz Andersson",
+  "description": "Researcher in Digital Transformation, Strategy Making and Implementation, AI and Organizational Decision Making, AI-driven Business Models and Socio-Economic Impacts, and Sustainable/Digital Health Innovation.",
+  "keywords": [
+    "Einav Peretz Andersson",
+    "Digital Transformation",
+    "Strategy Making",
+    "Strategy Implementation",
+    "AI and Decision Making",
+    "AI Business Models",
+    "Socio-Economic Impacts of AI",
+    "Sustainable Health",
+    "Digital Health",
+    "Innovation",
+    "Digital Ecosystems",
+    "Platforms"
+  ],
+  "site": {
+    "url": "https://einavperetzandersson.com",
+    "language": "en",
+    "author": "Dr. Einav Peretz Andersson"
+  },
+  "social": {
+    "linkedin": "linkedin.com/in/einav-peretz-andersson",
+	   "google scholars": "https://scholar.google.se/citations?hl=en&user=kfEJa0EAAAAJ",
+    "orcid": "https://orcid.org/0000-0002-9603-9289"
+  }
 }
