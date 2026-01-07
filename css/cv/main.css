@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
 /* Timeline custom component */
 .timeline-card {
   position: relative;
@@ -38,7 +40,12 @@ html, body {
   overflow-x: hidden; }
 
 .container {
-  max-width: 1140px; }
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
 
 .site-title {
   font-size: 1.25rem;
@@ -140,3 +147,57 @@ footer a:not(.nav-link) {
   .page-break {
     padding-top: 5rem;
     page-break-before: always; } }
+.site-footer .footer-col a {
+  display: block;
+  margin-bottom: 0.65rem;
+  opacity: 0.95;
+}
+
+.site-footer .footer-col a:last-child {
+  margin-bottom: 0;
+}
+/* Footer navigation cleanup */
+.site-footer .footer-col a {
+  border-bottom: none;
+}
+/* Global typography (consistent across all pages) */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+}
+
+p, li {
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+/* Footer navigation: force vertical list */
+.site-footer .footer-col nav a,
+.site-footer .footer-col a.nav-link,
+.site-footer .footer-col a {
+  display: block;
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+/* Remove inline spacing if links are inside a flex container */
+.site-footer .footer-col nav {
+  display: block;
+}
+/* Footer navigation: force vertical list */
+.site-footer .footer-col nav a,
+.site-footer .footer-col a.nav-link,
+.site-footer .footer-col a {
+  display: block;
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+/* Remove inline spacing if links are inside a flex container */
+.site-footer .footer-col nav {
+  display: block;
+}
+

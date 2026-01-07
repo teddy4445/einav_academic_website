@@ -2910,3 +2910,532 @@ margin: 0px 0px;
   display: inline-block;
   line-height: 1;
 }
+.site-footer .orcid-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.site-footer .orcid-badge:hover {
+  background: rgba(255,255,255,0.28);
+  text-decoration: none;
+}
+/* ==============================
+   HEADER PATCH (works with components/header.html)
+   No Bootstrap needed
+   ============================== */
+
+/* Desktop header layout */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Menu container used in header.html */
+.main-nav .menu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 24px;
+}
+
+/* Search container used in header.html */
+.main-nav .header-search {
+  display: flex;
+  align-items: center;
+}
+
+/* Make links look like the rest of your navbar */
+.main-nav .menu .nav-link {
+  text-decoration: none;
+}
+
+/* Active link highlight (you can change color if you want) */
+.main-nav .nav-link.active {
+  color: #667EEA;
+  font-weight: 600;
+}
+
+/* On small screens: hide desktop menu/search, show hamburger */
+@media only screen and (max-width: 850px) {
+  .main-nav .menu,
+  .main-nav .header-search {
+    display: none;
+  }
+}
+
+/* === Hero layout === */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* === Profile photo === */
+.hero-photo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-photo img {
+  width: 100%;
+  max-width: 220px;   /* <<< this is the key line */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+/* =========================
+   PROFILE HERO (Index page)
+   ========================= */
+
+.hero--profile {
+  padding: 3.5rem 0 2rem;
+}
+
+.hero-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.hero-top {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.25rem 0 1.75rem;
+}
+
+.hero-photo {
+  flex: 0 0 auto;
+}
+
+.hero-photo--round img {
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+.hero-heading {
+  min-width: 0;
+}
+
+.hero-name {
+  font-size: 3rem;
+  line-height: 1.05;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-title {
+  font-size: 1.35rem;
+  margin: 0 0 0.25rem;
+  opacity: 0.9;
+}
+
+.hero-tags {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.18);
+}
+
+.meta-line {
+  margin: 0 0 0.6rem;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .hero-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 2.25rem;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+}
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.pill {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+/* Research interests list (index) */
+.research-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+
+.research-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.research-list li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  opacity: 0.6;
+}
+/* Extra breathing room before Research interests */
+.block + .block {
+  margin-top: 3rem;
+}
+.page-about {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.about-hero {
+  padding: 1.5rem 0 2rem;
+}
+
+.about-hero__grid {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.about-hero__photo img {
+  width: 160px;
+  height: 160px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+.about-hero__subtitle {
+  margin: 0.25rem 0 1rem;
+  opacity: 0.9;
+  font-size: 1.2rem;
+}
+
+.about-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero__meta {
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+.prose {
+  max-width: 80ch;
+}
+
+@media (max-width: 768px) {
+  .about-hero__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-hero__photo img {
+    margin: 0 auto;
+  }
+  .about-hero__actions {
+    justify-content: center;
+  }
+  .about-hero__meta, .prose {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+}
+.page-about {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.about-hero {
+  padding: 1.5rem 0 2rem;
+}
+
+.about-hero__grid {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.about-hero__photo img {
+  width: 160px;
+  height: 160px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+.about-hero__subtitle {
+  margin: 0.25rem 0 1rem;
+  opacity: 0.9;
+  font-size: 1.2rem;
+}
+
+.about-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero__meta {
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+.prose {
+  max-width: 80ch;
+}
+
+@media (max-width: 768px) {
+  .about-hero__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-hero__photo img {
+    margin: 0 auto;
+  }
+  .about-hero__actions {
+    justify-content: center;
+  }
+  .about-hero__meta, .prose {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+}
+/* Ensure About page heading matches Index typography */
+.page-about h1 {
+  font-family: inherit;
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .page-about h1 {
+    font-size: 2.25rem;
+  }
+}
+/* --- About page typography alignment --- */
+
+.page-about h1 {
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 0.5rem;
+}
+
+.about-hero__subtitle {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.about-hero__meta {
+  max-width: 70ch;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Improve readability of bio text */
+.page-about .prose p {
+  line-height: 1.7;
+}
+
+/* Research list spacing */
+.research-list li {
+  margin-bottom: 0.4rem;
+}
+
+/* Mobile refinement */
+@media (max-width: 768px) {
+  .page-about h1 {
+    font-size: 2.25rem;
+  }
+}
+
+/* ==============================
+   HEADER FIX: keep logo left, menu center/left, search right
+   Put this at the VERY END of main.css
+   ============================== */
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo,
+.navbar .navbar-brand {
+  margin-right: 2rem;
+  white-space: nowrap;
+}
+
+/* push the menu/search to the right side correctly */
+.navbar .navbar-collapse {
+  display: flex !important;
+  align-items: center;
+  flex: 1;
+}
+
+/* the nav links block should take available space */
+.navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;  /* KEY: pushes search to the far right */
+}
+
+/* if your search sits in a form or .header-search */
+.navbar form,
+.navbar .header-search {
+  margin-left: auto;
+}
+.page-about h1{
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+/* Global page gutters */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Ensure the homepage hero aligns with container gutters */
+.hero-wrap {
+  padding: 0 1.5rem;
+}
+/* ==============================
+   GLOBAL PAGE GUTTERS (FIX)
+   ============================== */
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hero-wrap {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.site-footer {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+/* Footer navigation: force vertical list */
+.site-footer .footer-col nav a,
+.site-footer .footer-col a.nav-link,
+.site-footer .footer-col a {
+  display: block;
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+/* Remove inline spacing if links are inside a flex container */
+.site-footer .footer-col nav {
+  display: block;
+}
+/* Footer: stack ONLY the navigation links (don’t affect social icons) */
+.site-footer .footer-col.footer-nav a {
+  display: block;
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+/* Footer: keep social icon buttons perfectly centered */
+.site-footer .footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/* CTA buttons on index page */
+.pill-row {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  background-color: #1f2937; /* dark */
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #111827;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn--ghost {
+  background-color: transparent;
+  color: #1f2937;
+  border: 2px solid #1f2937;
+}
+
+.btn--ghost:hover {
+  background-color: #1f2937;
+  color: #fff;
+}

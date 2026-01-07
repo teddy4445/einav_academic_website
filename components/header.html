@@ -1,110 +1,78 @@
 <div class="mobile-menu-bg" id="mobile-menu-bg"></div>
-<!-- start of mobile menu-->
+
+<!-- Mobile menu -->
 <div id="mobile-menu" class="mobile-menu">
-	<div class="personal-coloum">
-		<h2 id="lecturer-name-template">Einav Peretz Andersson</h2>
-		<div class="input-group input-group-mobile">
-		  <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input" />
-		  <span class="input-group-append">
-			<button id="header-search-btn" class="btn btn-outline-secondary border-left-0 border search-menu-btn" type="button" onclick="searchPage();">
-				<i class="fa fa-search"></i>
-			</button>
-		  </span>
-		</div>
-		
-		<a class="mobile-menu-link-home" href="/">
-			Home
-		</a>
-		
-		<!-- start of menu -->
-		<div class="mobile-menu-link collapsible">
-			<a class="mobile-menu-link" href="/about.html">
-				About 
-			</a>
-		</div>
-		<div class="mobile-menu-link collapsible">
-			<a class="mobile-menu-link" href="/publications.html">
-				Publications 
-			</a>
-		</div>
-		<div class="mobile-menu-link collapsible">
-			<a class="mobile-menu-link" href="/research.html">
-				Research 
-			</a>
-		</div>
-		<div class="mobile-menu-link collapsible">
-			<a class="mobile-menu-link" href="/teaching.html">
-				Courses 
-			</a>
-		</div>
-		<div class="mobile-menu-link collapsible">
-			<a class="mobile-menu-link" href="/lab.html">
-				Lab 
-			</a>
-		</div>
-		<div class="mobile-menu-link collapsible">
-			<a class="mobile-menu-link" href="/blog.html">
-				Blog
-			</a>
-		</div>
-	</div>
+  <div class="personal-coloum">
+    <h2 id="lecturer-name-template">Einav Peretz-Andersson</h2>
+
+    <div class="input-group input-group-mobile">
+      <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input" />
+      <span class="input-group-append">
+        <button id="header-search-btn"
+                class="btn btn-outline-secondary border-left-0 border search-menu-btn"
+                type="button"
+                onclick="searchPage && searchPage();">
+          <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div>
+
+    <a class="mobile-menu-link-home" href="/index.html">Einav Peretz-Andersson</a>
+
+    <div class="mobile-menu-link"><a class="mobile-menu-link" href="/about.html">About</a></div>
+    <div class="mobile-menu-link"><a class="mobile-menu-link" href="/publications.html">Publications</a></div>
+    <div class="mobile-menu-link"><a class="mobile-menu-link" href="/research.html">Research</a></div>
+    <div class="mobile-menu-link"><a class="mobile-menu-link" href="/teaching.html">Courses</a></div>
+    <!-- <div class="mobile-menu-link"><a class="mobile-menu-link" href="/blog.html">Blog</a></div> -->
+<!-- <div class="mobile-menu-link"><a class="mobile-menu-link" href="/lab.html">Lab</a></div> -->
+
+  </div>
 </div>
-<!-- end of moblie menu-->
-<!-- start of navigation bar-->
-<nav class="navbar navbar-expand-md main-nav">
-	<div class="spacer"></div>
-	<a class="logo navbar-brand order-first order-md-0 mx-0" href="#" onclick="gotoIndex();">
-	<button class="hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="navigation" onclick="document.getElementById('mobile-menu').style.marginLeft = '0px';document.getElementById('mobile-menu-bg').style.marginLeft = '0px';">
-	  <span class="hamburger-box">
-		<span class="hamburger-inner"></span>
-	  </span>
-	</button>Einav Peretz Andersson</a>
-	<!-- start of navigation bar: menus-->
-	<div class="collapse navbar-collapse w-100">
-		<ul class="nav navbar-nav w-100 nowrap">
-			<li class="nav-item menu-main-link active">
-				<a class="nav-link collapsible" href="/about.html">About
-				</a>
-			</li>
-			<li class="nav-item menu-main-link active">
-				<a class="nav-link collapsible" href="/publications.html">Publications
-				</a>
-			</li>
-			<li class="nav-item menu-main-link active">
-				<a class="nav-link collapsible" href="/research.html">Research
-				</a>
-			</li>
-			<li class="nav-item menu-main-link">
-				<a class="nav-link collapsible" href="/teaching.html">Courses 
-				</a>
-			</li>
-			<li class="nav-item menu-main-link">
-				<a class="nav-link collapsible" href="/lab.html">Lab 
-				</a>
-			</li>
-			<li class="nav-item menu-main-link">
-				<a class="nav-link collapsible" href="/blog.html">Blog
-				</a>
-			</li>
-		</ul>
-	</div>
-	<!-- end of navigation bar: menus-->
-	<!-- start of navigation bar: about and search-->
-	<div class="collapse navbar-collapse w-100">
-		<ul class="nav navbar-nav ml-auto nowrap">
-			<li class="nav-item">
-				<div class="input-group">
-				  <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input_mobile" />
-				  <span class="input-group-append">
-					<button id="header-search-btn" class="btn btn-outline-secondary border-left-0 border search-menu-btn" type="button"  onclick="searchPage();">
-						<i class="fa fa-search"></i>
-					</button>
-				  </span>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<!-- end of navigation bar: about and search-->
-	<div class="spacer"></div>
+
+<!-- Desktop header bar (NO bootstrap needed) -->
+<nav class="navbar main-nav">
+  <div class="spacer"></div>
+
+  <!-- Brand (Home) -->
+  <a class="logo" href="/index.html">
+    <button class="hamburger hamburger--collapse"
+            type="button"
+            aria-label="Menu"
+            aria-controls="mobile-menu"
+            onclick="document.getElementById('mobile-menu').style.marginLeft='0px';
+                     document.getElementById('mobile-menu-bg').style.marginLeft='0px';">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    Einav Peretz-Andersson
+  </a>
+
+  <!-- Menu links -->
+  <div class="menu">
+    <a class="nav-link" href="/about.html">About</a>
+    <a class="nav-link" href="/publications.html">Publications</a>
+    <a class="nav-link" href="/research.html">Research</a>
+    <a class="nav-link" href="/teaching.html">Courses</a>
+   <!-- <a class="nav-link" href="/blog.html">Blog</a> -->
+<!-- <a class="nav-link" href="/lab.html">Lab</a> -->
+
+  </div>
+
+  <!-- Search -->
+  <div class="header-search">
+    <div class="input-group">
+      <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input_mobile" />
+      <span class="input-group-append">
+        <button id="header-search-btn"
+                class="btn btn-outline-secondary border-left-0 border search-menu-btn"
+                type="button"
+                onclick="searchPage && searchPage();">
+          <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
 </nav>
-<!-- end of navigation bar-->

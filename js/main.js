@@ -1,18 +1,35 @@
 // /js/main.js
-// Inject header + footer on every page (safe, async, no shared XHR)
+// Inject header + footer on every page (safe, async)
 
-let thisPage = location.href.split("/").slice(-1)[0];
-if (thisPage === "") thisPage = "index";
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    await loadHeader();
+    await loadFooter();
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadHeader();
-  loadFooter();
-
-  activeMenuLink();
-  manageCollapsible();
-  bindAlertClose();
-  bindMobileMenu();
+    // After header/footer are injected:
+    activeMenuLink();
+    manageCollapsible();
+    bindAlertClose();
+    bindMobileMenu();
+  } catch (e) {
+    console.error("main.js failed:", e);
+  }
 });
+
+/* ---------------- HELPERS ---------------- */
+
+async function fetchFirstOk(urls) {
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (res.ok) return { url, html: await res.text() };
+      console.warn(`Fetch failed (${res.status}) for:`, url);
+    } catch (e) {
+      console.warn("Fetch error for:", url, e);
+    }
+  }
+  throw new Error("All fetch attempts failed: " + urls.join(" OR "));
+}
 
 /* ---------------- HEADER / FOOTER ---------------- */
 
@@ -20,42 +37,56 @@ async function loadHeader() {
   const header = document.getElementById("header");
   if (!header) return;
 
-  try {
-    const res = await fetch("/components/header.html", { cache: "no-store" });
-    if (!res.ok) throw new Error(`Header HTTP ${res.status}`);
-    header.innerHTML = await res.text();
-  } catch (e) {
-    console.error("Failed to load header:", e);
-  }
+  const { html } = await fetchFirstOk([
+    "/components/header.html",
+    "components/header.html",
+    "./components/header.html",
+  ]);
+
+  header.innerHTML = html;
 }
 
 async function loadFooter() {
   const footer = document.getElementById("footer");
   if (!footer) return;
 
-  try {
-    const res = await fetch("/components/footer.html", { cache: "no-store" });
-    if (!res.ok) throw new Error(`Footer HTTP ${res.status}`);
-    footer.innerHTML = await res.text();
+  const { html } = await fetchFirstOk([
+    "/components/footer.html",
+    "components/footer.html",
+    "./components/footer.html",
+  ]);
 
-    // ✅ Set year AFTER footer HTML is injected
-    const yearEl = document.querySelector(".footer-year");
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-  } catch (e) {
-    console.error("Failed to load footer:", e);
-  }
+  footer.innerHTML = html;
+
+  // Set year AFTER footer HTML is injected
+  const yearEl = document.querySelector(".footer-year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
 
-/* ---------------- MENU ---------------- */
+/* ---------------- ACTIVE MENU LINK ---------------- */
 
 function activeMenuLink() {
-  if (typeof $ === "undefined") return;
+  const page = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
 
-  $(".menu a").each(function () {
-    if ($(this).attr("id") === thisPage) {
-      $(this).addClass("active");
-    }
-  });
+  const markActive = (selector) => {
+    document.querySelectorAll(selector).forEach((a) => {
+      const href = a.getAttribute("href");
+      if (!href) return;
+
+      const cleanHref = href.split("?")[0].split("#")[0].toLowerCase();
+
+      const isHome =
+        page === "index.html" &&
+        (cleanHref === "/" || cleanHref.endsWith("/index.html") || cleanHref === "index.html");
+
+      const isMatch = cleanHref.endsWith("/" + page) || cleanHref === page;
+
+      if (isHome || isMatch) a.classList.add("active");
+    });
+  };
+
+  markActive("nav a[href]");
+  markActive("#mobile-menu a[href]");
 }
 
 /* ---------------- COLLAPSIBLE ---------------- */
@@ -70,22 +101,19 @@ function manageCollapsible() {
 
         if (coll[j].classList.contains("active")) {
           coll[j].classList.remove("active");
-          const content = $(coll[j]).find("div")[0];
-          if (content) {
-            content.style.maxHeight = null;
-            content.style.opacity = null;
+          const otherContent = coll[j].querySelector("div");
+          if (otherContent) {
+            otherContent.style.maxHeight = null;
+            otherContent.style.opacity = null;
           }
         }
       }
 
       this.classList.toggle("active");
-      const content = $(this).find("div")[0];
+      const content = this.querySelector("div");
       if (!content) return;
 
-      content.style.maxHeight = content.style.maxHeight
-        ? null
-        : content.scrollHeight + "px";
-
+      content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
       content.style.opacity = content.style.opacity ? null : 1;
     });
   }
@@ -132,9 +160,7 @@ function gotoIndex() {
     document.documentElement.clientWidth
   );
 
-  if (width > 850) {
-    window.location.replace("/");
-  }
+  if (width > 850) window.location.replace("/");
 }
 
 function copy_cite(input_holder_id) {

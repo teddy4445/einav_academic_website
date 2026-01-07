@@ -1,232 +1,148 @@
-// imports
-import { PageRender, retrivedData } from '/js/pageRender.js';
-import {CourseCard} from '/js/components/courseCard.js';
-import {Icons} from '/js/components/icons.js';
+// /js/pages/teaching.js
+// Clean + robust teaching page renderer (no dependency on older components)
 
-// Data file paths
-let TAECHING_JSON = "/data/jsons/teaching.json";
+const TEACHING_JSON = "/data/jsons/teaching.json";
 
-// consts
-let default_filter = "All Universities";
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const data = await fetchJson(TEACHING_JSON);
+    const courses = Array.isArray(data?.courses) ? data.courses : [];
 
-/*
-	Single instance class to build teaching.html page with dynamic content from JSONS from the server
-*/
-class Teaching extends PageRender
-{
-	constructor()
-	{
-		super();
-        Teaching.loadFileFromServer(TAECHING_JSON, true);
-        this.cardList = CourseCard.createListFromJson(retrivedData["courses"]);
-        this.filter = default_filter;
-		this.listFilterName = CourseCard.listFilterButtons(this.cardList, this.property_university);
-		
-		// TODO: move outside to static member
-		this.property_university = 'university';
-		
-		// remove alert as they not in use and can make problems
-		removeAlertsPanels();
-	}
+    // Cache DOM
+    const topicSel = document.getElementById("topic-filter");
+    const yearSel = document.getElementById("year-filter");
+    const uniSel = document.getElementById("university-filter");
+    const body = document.getElementById("teaching-body");
+    const resetBtn = document.getElementById("reset-btn");
 
-    /* biuld function start */
+    if (!topicSel || !yearSel || !uniSel || !body) return;
 
-	// just gather all the build of all the sections in the page - one per call to the server side
-	build()
-	{
-		// build the page itself
-        this.buildHeader(this.filter);
-		this.buildBody(this.filter);
-		this.buildFilters();
+    // Build filter values
+    const topics = uniqueSorted(courses.map((c) => c?.topic).filter(Boolean));
+    const years = uniqueSorted(courses.map((c) => c?.year).filter(Boolean), true);
+    const unis = uniqueSorted(courses.map((c) => c?.university).filter(Boolean));
+
+    fillSelect(topicSel, "Topic", topics);
+    fillSelect(yearSel, "Year", years);
+    fillSelect(uniSel, "Institution", unis);
+
+    // Initial render
+    renderCourses(body, courses);
+
+    // Filtering
+    const applyFilters = () => {
+      const t = normalizedSelectValue(topicSel, "Topic");
+      const y = normalizedSelectValue(yearSel, "Year");
+      const u = normalizedSelectValue(uniSel, "Institution");
+
+      const filtered = courses.filter((c) => {
+        const okT = !t || (c?.topic || "") === t;
+        const okY = !y || (c?.year || "") === y;
+        const okU = !u || (c?.university || "") === u;
+        return okT && okY && okU;
+      });
+
+      renderCourses(body, filtered);
+    };
+
+    topicSel.addEventListener("change", applyFilters);
+    yearSel.addEventListener("change", applyFilters);
+    uniSel.addEventListener("change", applyFilters);
+
+    if (resetBtn) {
+      resetBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        topicSel.selectedIndex = 0;
+        yearSel.selectedIndex = 0;
+        uniSel.selectedIndex = 0;
+        renderCourses(body, courses);
+      });
     }
+  } catch (err) {
+    console.error("Teaching page failed:", err);
+  }
+});
 
-	//build the header section of the page
-    buildHeader(filterValue = default_filter)
-	{
-        try
-		{
-			let reset = document.getElementById("reset-btn");
-			reset.innerHTML = Icons.reset() + " Reset";
-			reset.addEventListener("click", this.buildBody());
-
-			let filter_btn = document.getElementById("filter-btn");
-			filter_btn.innerHTML = Icons.filter() + " Filter"
-		}
-        catch (error)
-		{
-			console.log("Error at Teaching.buildHeader saying: " + error);
-		}
-    }
-
-	//build the body section of the page, start after the button filter.
-    buildBody(filterValue = default_filter)
-	{
-
-		if(filterValue == default_filter)
-		{
-			this.clearFiltersDesign();
-			document.getElementById("reset-btn").style.display = "none";
-			let fils = document.getElementsByClassName("minimal");
-			for(let i = 0; i < fils.length; i++)
-			{
-				fils[i].selectedIndex = 0;
-			}
-		}
-		else
-		{
-			document.getElementById("reset-btn").style.display = "";
-		}
-        // sort the list
-		var buildTeachingList = CourseCard.sortByProperty(this.cardList, "year", "semester");
-		// if filter needed
-		if (filterValue != default_filter)
-		{
-			let selector = document.getElementById(filterValue + "-filter");
-			let selectorIndex = selector.selectedIndex;
-			let filter = selector.options[selectorIndex].value;
-			this.clearFiltersDesign();
-			selector.classList.add("active-sort-button");
-			// filter the needed list only
-			buildTeachingList = CourseCard.filterList(buildTeachingList, filterValue, filter);
-		}
-
-		// split into the right sets
-		var coursesSets = CourseCard.splitByProperty(buildTeachingList, 'university');
-		// build the UI //
-		try
-		{
-            if (buildTeachingList.length > 0)
-			{
-				var ansewrHtml = "";
-				var keys = [];
-				for (var spliterKey in coursesSets)
-				{
-					keys.push(spliterKey);
-				}
-				keys = keys.sort();
-
-				for (var spliterKeyIndex = 0; spliterKeyIndex < keys.length; spliterKeyIndex++)
-				{
-					// add spliter
-					ansewrHtml +='<div class="institution-card"><h2 class="institution-title">' + keys[spliterKeyIndex] + "</h2>";
-					// add elements inside the list
-					for (var elementIndex = 0; elementIndex < coursesSets[keys[spliterKeyIndex]].length; elementIndex++)
-					{
-						ansewrHtml += coursesSets[keys[spliterKeyIndex]][elementIndex].toHtml();
-					}
-					ansewrHtml+="</div>";
-				}
-				document.getElementById("teaching-body").innerHTML = ansewrHtml;
-            }
-			else // show error message
-			{
-				document.getElementById("teaching-body").innerHTML = "<h3>Don't have courses from universty " + filter + "</h3>";  // should not happen
-			}
-		}
-		catch (error)
-		{
-			console.log("Error at Teaching.buildBody saying: " + error);
-		}
-    }
-    /* build function end */
-
-	/* build filters */
-	buildFilters()
-	{
-		this.buildOneFilter("year");
-		this.buildOneFilter("university");
-		this.buildOneFilter("topic");
-	}
-
-	buildOneFilter(fName)
-	{
-		let filters = new Set();
-		for(let i = 0; i < this.cardList.length; i++)
-		{
-			let text = this.cardList[i][fName];
-			if(fName == "topic")
-			{
-				text = text.replaceAll("-"," ").trim().toLowerCase();
-
-			}
-			if(text == "") continue;
-			filters.add(text);
-		}
-		filters = Array.from(filters);
-		let filter = document.getElementById(fName+"-filter");
-		if(filters.length < 2 || filters[0] == undefined)
-		{
-			filter.parentElement.classList.remove("select-wrapper");
-			filter.style.display = "none";
-			return;
-		}
-		for(let i = 0; i < filters.length; i++)
-		{
-			let option = document.createElement("OPTION");
-			option.innerHTML = filters[i];
-			filter.appendChild(option);
-		}
-	}
-
-	//the function change the filter by the value.
-	ChangeFilter(filter_value)
-	{
-		this.filter = filter_value;
-		//build the new body after the filter change.
-		this.buildBody(filter_value);
-		//close filter display
-		this.filtersDisplay();
-	}
-
-	clearFiltersDesign()
-	{
-		let f = document.getElementsByClassName("active-sort-button");
-		if(f.length == 0) return;
-		f[0].selectedIndex = 0;
-		f[0].classList.remove("active-sort-button");
-	}
-
-	/*
-	Show/hide filters menu
-	*/
-	filtersDisplay(){
-		//relevent for mobile only
-		if (window.innerWidth > 430) return;
-		let filters = document.getElementsByClassName("select-wrapper")[0];
-		if( filters.style.display =="none"){
-			filters.style.display = "block";
-		}else {
-			filters.style.display = "none";
-		}
-	}
-
-	//reset view after resize page manualy(if the user like to change the browser size)
-	resetView(){
-		let filters = document.getElementsByClassName("select-wrapper")[0];
-		if (window.innerWidth > 430)
-			filters.style.display = "block";
-		else{
-			filters.style.display = "none";
-		}
-	}
-	
-
+async function fetchJson(url) {
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to load ${url} (${res.status})`);
+  return await res.json();
 }
 
-// run the class build on page load
-document.teaching = new Teaching();
-document.teaching.build();
+function uniqueSorted(arr, numeric = false) {
+  const uniq = Array.from(new Set(arr.map(String)));
+  if (numeric) return uniq.sort((a, b) => Number(b) - Number(a)); // newest first
+  return uniq.sort((a, b) => a.localeCompare(b));
+}
 
-// buttons click logic
-document.getElementById("year-filter").addEventListener("change", () => {document.teaching.ChangeFilter("year");});
-document.getElementById("topic-filter").addEventListener("change", () => {document.teaching.ChangeFilter("topic");});
-document.getElementById("university-filter").addEventListener("change", () => {document.teaching.ChangeFilter("university");});
-document.getElementById("reset-btn").addEventListener("click", () => {document.teaching.buildBody(default_filter);});
-document.getElementById("filter-btn").addEventListener("click", () => {document.teaching.filtersDisplay();});
+function fillSelect(select, placeholder, values) {
+  // keep first option as placeholder
+  select.innerHTML = `<option>${placeholder}</option>`;
+  values.forEach((v) => {
+    const opt = document.createElement("option");
+    opt.value = v;
+    opt.textContent = v;
+    select.appendChild(opt);
+  });
+}
 
-//event for resize page
-window.onresize = document.teaching.resetView;
+function normalizedSelectValue(select, placeholder) {
+  const v = (select.value || "").trim();
+  if (!v || v === placeholder) return "";
+  return v;
+}
 
+function renderCourses(container, courses) {
+  if (!Array.isArray(courses) || courses.length === 0) {
+    container.innerHTML = `<p class="content-text" style="max-width:80ch;">No courses found for the selected filters.</p>`;
+    return;
+  }
 
+  container.innerHTML = `
+    <div class="cards">
+      ${courses.map(courseCardHtml).join("")}
+    </div>
+  `;
+}
 
-export { Teaching }
+function courseCardHtml(c) {
+  const code = c?.code || "";
+  const name = c?.name || "Untitled course";
+  const year = c?.year ? `<span class="small">${escapeHtml(c.year)}</span>` : "";
+  const topic = c?.topic ? `<span class="small">${escapeHtml(c.topic)}</span>` : "";
+  const uni = c?.university ? `<span class="small">${escapeHtml(c.university)}</span>` : "";
+  const loc = c?.location_class ? `<span class="small">${escapeHtml(c.location_class)}</span>` : "";
+  const desc =
+  c?.description &&
+  c.description.trim().toLowerCase() !== "only placeholder."
+    ? escapeHtml(c.description)
+    : "";
+
+  const meta = [year, topic, uni, loc].filter(Boolean).join(" · ");
+
+  return `
+    <article class="card">
+      <h3 style="margin-bottom:.35rem;">
+        <a href="/course-page.html?course_id=${encodeURIComponent(code)}" style="text-decoration:none;">
+          ${escapeHtml(name)}
+        </a>
+      </h3>
+      <p class="small" style="margin:0 0 .5rem 0; opacity:.85;">${meta}</p>
+      ${desc ? `<p style="margin:0; max-width:90ch;">${desc}</p>` : ""}
+      <p style="margin-top:.75rem;">
+        <a class="btn btn--ghost" href="/course-page.html?course_id=${encodeURIComponent(code)}">
+          Open course page
+        </a>
+      </p>
+    </article>
+  `;
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}

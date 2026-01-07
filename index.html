@@ -1,189 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- technical meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- seo -->
   <title>Einav Peretz-Andersson | PhD</title>
-  <meta name="description"
-        content="Academic website of Einav Peretz-Andersson, Senior Lecturer and Researcher in AI-driven organizational transformation, AI governance, and explainable AI." />
+  <meta
+    name="description"
+    content="Academic website of Einav Peretz-Andersson, Senior Lecturer and Researcher in AI Transformation, Explainable AI, and AI Governance."
+  />
 
-  <link rel="stylesheet" href="css/main.css" />
+  <!-- icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+  />
+
+  <!-- bootstrap baseline -->
+  <link
+    rel="stylesheet"
+    crossorigin="anonymous"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  />
+
+  <!-- main site styles -->
+  <link rel="stylesheet" href="/css/main.css" />
 </head>
 
 <body>
 
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a class="brand" href="index.html">Einav Peretz-Andersson</a>
-      <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="lab.html">Lab</a>
-        <a href="about.html">About</a>
-       <a href="files/CV_EPA.pdf" target="_blank" rel="noopener">CV</a>
+  <!-- header injected by /js/main.js -->
+  <header id="header"></header>
 
-      </nav>
-    </div>
-  </header>
-
+  <!-- main content -->
   <main class="container">
 
     <!-- HERO -->
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-text">
-          <h1>Einav Peretz-Andersson</h1>
-         <p class="subtitle">
-  PhD • Senior Lecturer • Researcher in AI Transformation<br/>
-  AI Transformation • Explainable AI • AI Governance
-</p>
+    <section class="hero hero--profile">
+      <div class="hero-wrap">
 
-         <p class="meta">
-  <strong>Affiliation:</strong> School of Engineering, Jönköping University, Sweden;<br/>
-  Jönköping International Business School – Media and Management Center (MMTC)<br/>
-  <strong>Roles:</strong> Researcher in AI Transformation · Senior Lecturer · Programme Manager (MSc in AI Engineering)<br/>
-  <strong>Email:</strong> einav.peretz@ju.se
-</p>
+        <div class="hero-top">
+          <div class="hero-photo hero-photo--round">
+            <img
+              src="/img/personal_image.png"
+              alt="Photo of Einav Peretz-Andersson"
+              loading="lazy"
+            />
+          </div>
 
-
-          <p class="links">
-            <a href="#" target="_blank" rel="noopener">Google Scholar</a>
-            <span>·</span>
-            <a href="#" target="_blank" rel="noopener">ResearchGate</a>
-            <span>·</span>
-            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-          </p>
+          <div class="hero-heading">
+            <h1 class="hero-name">Einav Peretz-Andersson</h1>
+            <p class="hero-title">
+              PhD · Senior Lecturer · Researcher in AI Transformation
+            </p>
+            <p class="hero-tags">
+              AI Transformation · Explainable AI · AI Governance
+            </p>
+          </div>
         </div>
 
-        <!-- Optional photo -->
-        <!--
-        <div class="hero-photo">
-          <img src="img/profile.jpg" alt="Photo of Einav Peretz-Andersson" />
+        <div class="hero-meta">
+          <div class="meta-col">
+            <p class="meta-line">
+              <strong>Email:</strong>
+              <a href="mailto:einav.peretz.andersson@ju.se">
+                einav.peretz.andersson@ju.se
+              </a>
+            </p>
+            <p class="meta-line">
+              <strong>Affiliation:</strong>
+              School of Engineering, Jönköping University, Sweden
+            </p>
+          </div>
+
+          <div class="meta-col">
+            <p class="meta-line">
+              <strong>Roles:</strong>
+              Researcher · Senior Lecturer · Programme Manager (MSc in AI Engineering)
+            </p>
+            <p class="meta-line">
+              MMTC – Jönköping International Business School
+            </p>
+          </div>
         </div>
-        -->
+
       </div>
     </section>
 
-    <!-- BIO -->
+    <!-- SHORT INTRO (snapshot, not biography) -->
     <section class="block">
-      <h2>Bio</h2>
-     <p>
-  Einav Peretz-Andersson is a Senior Lecturer and Researcher at the School of Engineering,
-  Jönköping University, Sweden, and is also affiliated with the Jönköping International Business School
-  Media and Management Center (MMTC). She also serves as Program Manager for the Master’s
-  programme in AI Engineering.
-</p>
-
       <p>
-        Her research specializes in AI-driven organizational transformation, with a focus on AI adoption,
-        data-driven decision-making, explainable AI, and AI governance structures in both public and
-        private sector organizations. She examines how artificial intelligence and digital technologies
-        reshape organizational strategies, roles, business models, and institutional frameworks, and how
-        organizations manage the strategic, ethical, and operational challenges associated with large-scale
-        AI implementation.
+        I study <strong>AI Transformation</strong> as a socio-technical organizational transformation,
+        focusing on how artificial intelligence reshapes strategy, structure, decision-making,
+        governance, and accountability in public and private organizations.
       </p>
 
-      <p>
-        With a multidisciplinary background spanning engineering, innovation, and policy-oriented research,
-        Einav combines academic rigor with practical relevance. Her work aims to support responsible,
-        sustainable, and inclusive digital transformation, bridging research and practice to help
-        organizations navigate the complexities of AI-enabled change.
+      <p class="pill-row">
+        <a class="btn" href="about.html">About me</a>
+        <a class="btn btn--ghost" href="research.html">Research</a>
+        <a class="btn btn--ghost" href="publications.html">Publications</a>
       </p>
     </section>
 
-    <!-- RESEARCH INTERESTS -->
+    <!-- RESEARCH INTERESTS (compact) -->
     <section class="block">
       <h2>Research interests</h2>
-      <ul class="bullets">
-        <li>AI-driven organizational transformation and AI maturity</li>
+      <ul class="research-list">
+        <li>AI transformation and AI maturity in organizations</li>
         <li>Explainable AI (XAI) and human-centered AI systems</li>
         <li>AI governance, ethics, and responsible AI implementation</li>
-        <li>Digital transformation and data-driven decision-making</li>
-        <li>Ecosystem collaboration for digital and circular transitions</li>
+        <li>Data-driven decision-making in complex organizations</li>
+        <li>Digital and circular ecosystem collaboration</li>
       </ul>
-    </section>
-
-    <!-- FEATURED PUBLICATIONS -->
-    <section class="block">
-      <div class="block-header">
-        <h2>Featured publications</h2>
-        <a class="more" href="publications.html">See all</a>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>AI Transformation as Organizational Transformation</h3>
-          <p class="small">
-            Peretz-Andersson, E. • Journal / Conference • Year
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Governing Explainable AI in Public Sector Organizations</h3>
-          <p class="small">
-            Peretz-Andersson, E. et al. • Journal / Conference • Year
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>From Orchestration to Transformation in AI Ecosystems</h3>
-          <p class="small">
-            Peretz-Andersson, E. • Journal / Conference • Year
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- FEATURED RESEARCH -->
-    <section class="block">
-      <div class="block-header">
-        <h2>Featured ongoing research</h2>
-        <a class="more" href="research.html">See all</a>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>AI Transformation & AI Maturity</h3>
-          <p>
-            Conceptualizing AI transformation as a socio-technical organizational transformation
-            integrating strategy, structure, processes, culture, people, and technology.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Explainable AI and Governance Frameworks</h3>
-          <p>
-            Developing governance models and explainability practices that support transparency,
-            accountability, and trust in AI-enabled decision-making.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>AI in Digital and Circular Ecosystems</h3>
-          <p>
-            Studying how cross-sector ecosystem collaboration enables digital and circular transitions
-            through shared AI capabilities and governance structures.
-          </p>
-        </article>
-      </div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p class="small">© <span id="y"></span> Einav Peretz-Andersson</p>
-    </div>
-  </footer>
+  <!-- footer injected by /js/main.js -->
+  <footer class="site-footer" id="footer"></footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <!-- js -->
+  <script type="module" src="/js/main.js"></script>
 
 </body>
 </html>
-

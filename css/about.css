@@ -466,7 +466,7 @@ ul .active-topic {
   font-size: 16px;
   line-height: 150%;
   color: #4A5568;
-  background-image: url("/lecture_website_template/img/expand_more.png");
+  background-image: url("/img/expand_more.png");
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -676,4 +676,41 @@ p .more-section {
 /* CV icon spacing */
 #cv .fa {
   margin-right: 10px;
+}
+/* Research list bullets - encoding safe */
+.page-about .research-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.page-about .research-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin: 0.35rem 0;
+}
+
+.page-about .research-list li::before {
+  content: "\2022"; /* bullet */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* Match About page name to Index page typography */
+.page-about h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+/* Make About page title match Index (sans-serif) */
+.page-about h1 {
+  font-family: inherit !important;  /* use body font like Index */
+  font-weight: 800 !important;      /* bold like Index */
+  letter-spacing: -0.02em;
+}
+
+/* Optional: make subtitle match Index feel */
+.page-about .about-hero__subtitle {
+  font-family: inherit !important;
+  font-weight: 600;
 }

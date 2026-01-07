@@ -1,4 +1,4 @@
-import { Icons } from "../icons.js";
+import { Icons } from "../../../icons.js";
 
 async function loadAboutPage() {
   // Update path if your JSON is elsewhere:
