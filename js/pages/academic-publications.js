@@ -2,10 +2,13 @@
 import { PageRender, retrivedData } from '/js/pageRender.js';
 import { PublicationCard } from '/js/components/publicationCard.js';
 import { addCollapseFunction } from '/js/descriptionSlicer.js';
-import {Icons} from '/js/components/icons.js';
+import { Icons } from "/js/icons.js";
+
 
 // Data file paths
 let PUBLICATIONS_JSON = "/data/jsons/academic-publications.json";
+
+
 
 // consts
 const default_sorter = "year";
@@ -311,3 +314,4 @@ document.academicPublications = new AcademicPublications();
 document.academicPublications.build();
 
 export { AcademicPublications };
+

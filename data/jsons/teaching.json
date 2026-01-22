@@ -1,34 +1,69 @@
 {
-	"teaching_philosophy": "Online learning is the future. Students should be able to find quality acadmic resources easly which provided by their lecturers.",
-	"courses": [{
-			"name": "Research Methods for Intelligent Systems",
-			"passkey": "",
-			"code": "TRIS",
-			"year": "2024",
-			"topic": "Research Methods",
-			"semester": "1",
-			"university": "Jonkoping University",
-			"department": "Computing",
-			"location_class": "on site",
-			"syllabus": "/files/Research Methods for Intelligent Systems.pdf",
-			"grade_parts": [{
-					"name": "Home work",
-					"percent": 50
-				},
-				{
-					"name": "Exam",
-					"percent": 50
-				}
-			],
-			"resources": {
-				"optinal": [
-				]
-			},
-			"updates": [
-			],
-			"modules": [
-			],
-			"description": "Only placeholder."
-		}
-	]
+  "teaching_philosophy": "Online learning is the future. Students should be able to find quality academic resources easily provided by their lecturers.",
+  "courses": [
+    {
+      "name": "Research Methods for Intelligent Systems",
+      "passkey": "",
+      "code": "TRIS",
+      "year": "2024",
+      "topic": "Research Methods",
+      "semester": "1",
+      "university": "Jonkoping University",
+      "department": "Computing",
+      "location_class": "on site",
+      "syllabus": "/files/Research Methods for Intelligent Systems.pdf",
+      "grade_parts": [
+        { "name": "Home work", "percent": 50 },
+        { "name": "Exam", "percent": 50 }
+      ],
+      "resources": [
+        { "optinal": [] }
+      ],
+      "updates": [],
+      "modules": [],
+      "description": "Only placeholder."
+    },
+    {
+      "name": "AI Transformation (MBA)",
+      "passkey": "",
+      "code": "EBS-AIT",
+      "year": "2024",
+      "topic": "AI Transformation",
+      "semester": "Guest lecture",
+      "university": "European Business School (EBS)",
+      "department": "MBA Programme",
+      "location_class": "Germany",
+      "syllabus": "",
+      "grade_parts": [
+        { "name": "Guest lecture", "percent": 100 }
+      ],
+      "resources": [
+        { "optinal": [] }
+      ],
+      "updates": [],
+      "modules": [],
+      "description": "Visiting lecture on AI Transformation: strategy, structure, culture, and responsible scaling in organizations."
+    },
+    {
+      "name": "AI and Innovation",
+      "passkey": "",
+      "code": "UDINE-AII",
+      "year": "2024",
+      "topic": "AI & Innovation",
+      "semester": "Guest lecture",
+      "university": "University of Udine",
+      "department": "Guest lecture",
+      "location_class": "Italy",
+      "syllabus": "",
+      "grade_parts": [
+        { "name": "Guest lecture", "percent": 100 }
+      ],
+      "resources": [
+        { "optinal": [] }
+      ],
+      "updates": [],
+      "modules": [],
+      "description": "Guest lecture on AI and innovation: organizational implications, governance, and value creation."
+    }
+  ]
 }

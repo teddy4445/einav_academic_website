@@ -1,28 +1,50 @@
 {
-   "biography":"Einav Peretz-Andersson is a Lecturer and PhD student in business administration at Jönköping University, Sweden. She is program manager for the AI Engineering Master of Science program. She has an MBA from Jönköping University and a Master in Public Policy and Economics from Tel Aviv University, Israel. Her research focus is on AI transformation and organizational change. She is currently conducting an interdisciplinary, international collaboration with researchers from Norwegian University of Technology, Norway, and Luleå University of Technology, Sweden, with the goal to generate new knowledge concerning AI transformation in the public sector.",
-   "researchInterests":[
-		"Real-world application of data-driven and intelligent systems (AI) is increasing in the private and public sector as well as in society at large."
-   ],
-   "featuredPublications":[
-	{
-         "name":"Artificial intelligence implementation in manufacturing SMEs: A resource orchestration approach",
-         "description":"Artificial intelligence (AI) is playing a leading role in the digital transformation of enterprises, particularly in the manufacturing industry where it has been responsible for a profound transformation in key business and production operations. Despite the accelerated growth of AI technologies, knowledge of the implementation of AI by small and medium-sized enterprises (SMEs) remains underexplored. Thus, this study seeks to examine how manufacturing SMEs orchestrate resources for AI implementation. Building on the resource orchestration (RO) theory and recent work on AI implementation, we investigate multiple case studies involving manufacturing SMEs in Sweden operating in the packaging, plastic, and metal sectors. Our findings indicate that SMEs structure a portfolio based on acquiring and accumulating AI resources. AI resources are bundled into learning and governance capabilities to leverage configurations for AI implementation. Through a dynamic process of AI resource orchestration, SMEs effectively leverage AI resources and capabilities by mobilising technologies, coordinating manufacturing processes, and empowering skilled people. This research contributes to existing practice and the academic literature on AI implementation, highlighting how SMEs orchestrate AI resources and capabilities to drive an organisation’s digital transformation whilst creating a competitive advantage.",
-         "fileLinks":[{"info": "download", "type": 1, "link": "/files/paper1.pdf"},
-					  {"info": "cite", "type": 3, "link": "Peretz-Andersson, E., Tabares, S., Mikalef, P., Parida, V., Artificial intelligence implementation in manufacturing SMEs: A resource orchestration approach. International Journal of Information Management. 2024."}],
-		 "authors": "Einav Peretz-Andersson",
-         "year": 2024,
-         "topic":"AI",
-         "type":"Paper",
-         "publisher":"International Journal of Information Management",
-         "publicationStatus":"Published"
-      }
-   ],
-   "currentProjects":[
-      {
-         "name":"The economics of AI",
-         "topic": "AI",
-         "description":"Something smart goes here",
-         "link":{"info": "View project", "type": 2, "link": "", "example":""}
-      }
-   ]
+  "biography": "Einav Peretz-Andersson is a Senior Lecturer and Researcher at the School of Engineering, Jönköping University, Sweden, where she also serves as Program Manager for the Master’s programme in AI Engineering. Her research focuses on AI-driven organizational transformation: how organizations build the strategic, cultural, and operational capabilities needed to adopt AI responsibly at scale. She studies AI adoption and data-driven decision-making, explainable AI (XAI) as a foundation for trust and accountability, and AI governance structures in both public and private sector organizations. With a multidisciplinary background spanning engineering, innovation, and policy-oriented research, Einav bridges academic rigor with practical relevance to support responsible, sustainable, and inclusive digital transformation. She leads interdisciplinary and international research collaborations with institutions such as the Norwegian University of Science and Technology (NTNU), Università degli Studi di Udine (Italy), and Luleå University of Technology.",
+  "researchInterests": [
+    "AI transformation and AI maturity: how strategy, structure, processes, culture, people, and technology co-evolve with AI adoption.",
+    "Explainable AI (XAI) and human-centered AI: transparency, interpretability, and decision accountability in organizational contexts.",
+    "AI governance and responsible AI: governance models, ethics, risk, and compliance practices for large-scale AI implementation.",
+    "Data-driven decision-making and operating models: designing roles, routines, and capabilities for AI-enabled work.",
+    "Ecosystem collaboration for digital and circular transitions: how cross-actor coordination enables transformation beyond single organizations."
+  ],
+  "featuredPublications": [
+    {
+      "name": "Artificial intelligence implementation in manufacturing SMEs: A resource orchestration approach",
+      "description": "This study examines how manufacturing SMEs orchestrate resources for AI implementation. Findings show how SMEs acquire and accumulate AI resources, bundle them into learning and governance capabilities, and mobilize technologies, processes, and skilled people to enable AI-enabled transformation.",
+      "fileLinks": [
+        { "info": "download", "type": 1, "link": "/files/paper1.pdf" },
+        {
+          "info": "cite",
+          "type": 3,
+          "link": "Peretz-Andersson, E., Tabares, S., Mikalef, P., Parida, V. (2024). Artificial intelligence implementation in manufacturing SMEs: A resource orchestration approach. International Journal of Information Management."
+        }
+      ],
+      "authors": "Einav Peretz-Andersson",
+      "year": 2024,
+      "topic": "AI implementation",
+      "type": "Paper",
+      "publisher": "International Journal of Information Management",
+      "publicationStatus": "Published"
+    }
+  ],
+  "currentProjects": [
+    {
+      "name": "AI Transformation & AI Maturity in Organizations",
+      "topic": "AI transformation",
+      "description": "Conceptualizing AI transformation as a distinct form of organizational transformation, integrating strategy, structure, processes, culture, people, and technology. Focus on how organizations develop maturity through capability building and cultural adaptation.",
+      "link": { "info": "View project", "type": 2, "link": "/research.html", "example": "" }
+    },
+    {
+      "name": "Explainable AI (XAI) and Trustworthy Decision-Making",
+      "topic": "Explainable AI",
+      "description": "Investigating how explainability practices, interpretability requirements, and human-centered design support accountability and trust in AI-enabled decision-making across organizational settings.",
+      "link": { "info": "View project", "type": 2, "link": "/research.html", "example": "" }
+    },
+    {
+      "name": "AI Governance for Responsible Implementation",
+      "topic": "AI governance",
+      "description": "Designing governance structures, roles, and policies that help organizations manage strategic, ethical, legal, and operational risks associated with large-scale AI adoption—especially in public sector and regulated contexts.",
+      "link": { "info": "View project", "type": 2, "link": "/research.html", "example": "" }
+    }
+  ]
 }

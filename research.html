@@ -1,83 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- technical meta -->
-	<meta charset="utf-8"/>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-	<!-- end - technical meta -->
+  <!-- technical meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!-- seo -->
-	<title> Einav Peretz Andersson </title>
-	<meta content="Einav Peretz Andersson - the economics of AI scholar" name="description"/>
-	<meta content="keywords" content="Einav, Peretz Andersson, AI economics, Business-AI research" />
-	<meta content="Teddy Lazebnik" name="author"/>
-	<link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
-	<!-- end - seo -->
+  <!-- seo -->
+  <title>Research | Einav Peretz-Andersson</title>
+  <meta
+    name="description"
+    content="Research of Einav Peretz-Andersson — AI Transformation, governance, explainable AI, and digital & circular ecosystems."
+  />
+  <meta
+    name="keywords"
+    content="AI Transformation, AI governance, Explainable AI, digital transformation, ecosystems, strategy, decision-making"
+  />
+  <meta name="author" content="Einav Peretz-Andersson" />
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
 
-	<!-- css -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
-	<link href="/css/main.css" rel="stylesheet">
-	<link href="/css/descriptionTrim.css" rel="stylesheet">
-	<link href="/css/research.css" rel="stylesheet">
-	<link href="/css/tabs.css" rel="stylesheet">
-	<!-- end - css -->
-	
-	<!-- Analytics -->
-	
+  <!-- css (same baseline as About) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link
+    rel="stylesheet"
+    crossorigin="anonymous"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  />
+  <link rel="stylesheet" href="/css/main.css" />
+
+  <!-- keep your existing research styling hooks -->
+  <link rel="stylesheet" href="/css/research.css" />
+  <link rel="stylesheet" href="/css/tabs.css" />
+  <link rel="stylesheet" href="/css/descriptionTrim.css" />
 </head>
+
 <body>
-	<!-- header -->
-	<header class="header" id="header">
-	</header>
-	<!-- end - header -->
-	
-	<!-- main content -->
-	<main class="content" id="main_section">
-		<div class="academic-papers-container">
-			<div class="academic-papers-header-section">
-				<!-- <div class="breadcrumb-page" id="breadcrumb_section">
-					<ul>
-						<li>
-							<a href="/">Home</a>
-						</li>
-						<li>
-							<a>Research</a>
-						</li>
-					</ul>
-				</div> -->
-			</div>
-			<div class="academic-papers-header-section">
-				<div class="personal-coloum w-100 research-open-section">
-					<h1>Research</h1>
-					<p class="research-open-statment">Read about my research projects, get to know my research team and find opportunities to work with me. </p>
-					
-				</div>
-				<div class="personal-coloum w-100">
-					<div id="tabs" class="tabs"></div>
-					<div id="main-body-page"></div>
-				</div>
-				
-			</div>
-		</div>
-	</main>
-	<!-- end - main content -->
-	
-	<!-- footer -->
-	<footer class="footer" id="footer">
-	</footer>
-	<!-- end - footer -->
-	
-	<!-- js -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="/js/main.js"> </script>	
-	<script src="/js/search.js"> </script>
-	<script src="/js/pages/research.js" type="module"> </script>
-	<script>
-	
-	</script>
-	<!-- end - js -->	
+  <!-- header injected by /js/main.js -->
+  <header id="header"></header>
+
+  <main class="container page-research" id="main_section">
+
+    <!-- RESEARCH HERO -->
+    <section class="block">
+      <h1>Research</h1>
+
+      <p class="lead" style="max-width: 80ch;">
+        I study <strong>AI Transformation</strong> as a socio-technical organizational transformation—focusing on how AI reshapes
+        strategy, structure, decision-making, governance, and accountability in public and private organizations.
+      </p>
+
+      <div class="pill-row">
+        <span class="pill">AI Transformation &amp; AI maturity</span>
+        <span class="pill">Explainable AI (XAI)</span>
+        <span class="pill">AI governance &amp; responsible adoption</span>
+        <span class="pill">Decision-making in complex organizations</span>
+        <span class="pill">Digital &amp; circular ecosystems</span>
+      </div>
+
+      <div class="pill-row" style="margin-top: 1.25rem;">
+        <a class="btn" href="#projects">Current projects</a>
+        <a class="btn btn--ghost" href="#grants">Grants &amp; leadership</a>
+        <a class="btn btn--ghost" href="#work-with-me">Work with me</a>
+      </div>
+    </section>
+
+    <!-- RESEARCH PROGRAM -->
+    <section class="block">
+      <h2>Research program</h2>
+      <p style="max-width: 80ch;">
+        My research advances <strong>AI Transformation</strong> as a distinct form of organizational transformation integrating
+        strategy, structure, processes, culture, people, and technology.
+      </p>
+      <ul class="research-list">
+        <li><strong>Trust and governance of AI in industry</strong></li>
+        <li><strong>AI-augmented decision-making</strong> for manufacturing resilience</li>
+        <li><strong>AI literacy</strong> and responsible adoption in higher education</li>
+      </ul>
+    </section>
+
+    <!-- PRIMARY AREAS -->
+    <section class="block">
+      <h2>Primary research areas</h2>
+      <ul class="research-list">
+        <li>Digital transformation, strategy making, and implementation</li>
+        <li>AI and organizational decision making</li>
+        <li>AI, new business models, and socio-economic impacts</li>
+        <li>User behavior in digital products and services markets</li>
+        <li>Strategy making in digital ecosystems and platforms</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS (anchor for CTA) -->
+    <section class="block" id="projects">
+      <div class="block-header">
+        <h2>Projects</h2>
+        <span class="small" style="opacity:0.8;">Selected and ongoing</span>
+      </div>
+
+      <!-- Your dynamic tabs/content can populate here -->
+      <div id="tabs" class="tabs"></div>
+      <div id="main-body-page"></div>
+
+      <p class="small" style="margin-top: 1rem; opacity: 0.85;">
+        For a complete publication list, see my
+        <a href="publications.html">Publications</a> page or Google Scholar.
+      </p>
+    </section>
+
+   <!-- RESEARCH LEADERSHIP -->
+<section class="block" id="research-leadership">
+  <h2>Research leadership</h2>
+
+  <ul class="research-list">
+    <li>
+      <strong>
+        <a href="https://ju.se/om-oss/hogskolan-for-larande-och-kommunikation/forskning/jaine---jonkoping-university-ai-network.html"
+           target="_blank" rel="noopener">
+          JU AI Research Network (JAINe)
+        </a>
+      </strong>
+      — interdisciplinary coordination of AI research, education, and societal collaboration
+    </li>
+
+    <li>
+      <strong>
+        <a href="https://sais.se/sais-board/"
+           target="_blank" rel="noopener">
+          Swedish AI Society (SAIS)
+        </a>
+      </strong>
+      — board member
+    </li>
+
+    <li>
+      <strong>
+        <a href="https://ju.se/samarbeta/event-och-konferenser/konferens/scai-symposium-2024.html"
+           target="_blank" rel="noopener">
+          Scandinavian Conference on Artificial Intelligence (SCAI 2024)
+        </a>
+      </strong>
+      — General Chair, theme: <em>AI for a Better Society</em>
+    </li>
+
+    <li>
+      <strong>
+        <a href="https://copa-conference.com/index.html"
+           target="_blank" rel="noopener">
+          Conformal Prediction and Applications (COPA)
+        </a>
+      </strong>
+      — organizing committee member
+    </li>
+  </ul>
+</section>
+
+
+
+    <!-- WORK WITH ME -->
+    <section class="block" id="work-with-me">
+      <h2>Work with me</h2>
+      <p style="max-width: 80ch;">
+        I welcome collaboration with researchers, students, and organizations interested in responsible AI transformation,
+        governance, and AI-enabled decision-making.
+      </p>
+
+      <ul class="research-list">
+        <li><strong>MSc/BSc thesis supervision</strong> (AI transformation, governance, adoption, decision-making, ecosystems)</li>
+        <li><strong>Industry &amp; public sector pilots</strong> (AI readiness, governance frameworks, decision support)</li>
+        <li><strong>Teaching &amp; invited talks</strong> (AI transformation for leaders, responsible AI adoption)</li>
+      </ul>
+
+      <p style="margin-top: 1rem;">
+        <a class="btn" href="mailto:einav.peretz.andersson@ju.se">Contact me</a>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- footer injected by /js/main.js -->
+  <footer class="site-footer" id="footer"></footer>
+
+  <!-- js -->
+  <script src="/js/main.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/pages/research.js" type="module"></script>
 </body>
 </html>
