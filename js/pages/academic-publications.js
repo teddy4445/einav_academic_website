@@ -2,7 +2,7 @@
 import { PageRender, retrivedData } from '/js/pageRender.js';
 import { PublicationCard } from '/js/components/publicationCard.js';
 import { addCollapseFunction } from '/js/descriptionSlicer.js';
-import { Icons } from "/js/icons.js";
+import { Icons } from "/js/components/icons.js";
 
 
 // Data file paths

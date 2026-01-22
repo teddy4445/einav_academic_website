@@ -1,6 +1,6 @@
 // /js/pages/about.js
 
-import { Icons } from "/js/icons.js";
+import { Icons } from "/js/components/icons.js";
 import { Tabs } from "/js/components/tabs.js";
 import { ProjectSection } from "/js/components/projectSection.js";
 import { Resource } from "/js/components/resources.js";
